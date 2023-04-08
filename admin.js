@@ -22,7 +22,7 @@ add_event_button.addEventListener('click',()=>
     let time=document.getElementById("time").value
     let venue=document.getElementById("venue").value
     let formlink=document.getElementById("formlink").value
-    database.ref("clubs/"+clubid+"/"+event_name).update({name:event_name,date:date,time:time,venue:venue,formlink:formlink})
+    database.ref("clubs/"+clubid+"/"+event_name).update({name:event_name,date:date,time:time,venue:venue,formlink:formlink,clubid:clubid})
     const ref = firebase.storage().ref();
     const file = document.querySelector("#photo").files[0];
     const name =  clubid+ "-" + event_name;
