@@ -7,11 +7,11 @@ Solution:
 To tackle this issue, we propose developing an all-in-one website that provides comprehensive information on all the events happening on campus. This website will make it easy for students to stay informed and engaged, enabling them to plan and prioritize their participation in various activities. Its user-friendly design and social media features will ensure that students are always up-to-date with the latest happenings in the college community.
 
 The website will have following features:
-A sign-in, sign-up page for each student 
-Admin login for authorized club members.
-Admin can add, create, schedule new events with date, time, venue and participation link.
-Users can see upcoming events and participate in the same 
-Users can see details of each club and their events.
-Admins get a warning if their events clash with others.
-Notifications related to events.
-Admins can customize their club page by adding achievements and content.
+- A sign-in, sign-up page for each student 
+- Admin login for authorized club members.
+- Admin can add, create, schedule new events with date, time, venue and participation link.
+- Users can see upcoming events and participate in the same 
+- Users can see details of each club and their events.
+- Admins get a warning if their events clash with others.
+- Notifications related to events.
+- Admins can customize their club page by adding achievements and content.
