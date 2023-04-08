@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="header">
+    
+    <a href="adminpage.html "><button class="btnback"><i class='bx bx-arrow-back'></i></button></a></i>
+    <h1>ADD YOUR NEW EVENT</h1>
+    </div>
+    <div class="container">
+        
+          <ul class="flex-outer">
+            <li>
+              <label for="club-id">Club Id</label>
+              <input placeholder="club_id" type="email" id="clubid">
+            </li>
+            <li>
+              <label for="event-name">Event Name</label>
+              <input placeholder="event name" type="text" id="eventname"/>
+            </li>
+            <li>
+              <label for="date">Date</label>
+              <input placeholder="date" type="date" id="date"/>
+            </li>
+            <li>
+              <label for="time">Time</label>
+              <input placeholder="time" type="time" id="time"/>
+            </li>
+            <li>
+              <label for="venue">venue</label>
+              <input placeholder="venue" type="text" id="venue"/>
+            </li>
+            <li>
+             <div id="button_container">
+                <button id="addevent"> add event </button>
+            </div>
+        
+            </li>
+          </ul>
+        
+      </div>
+
+
+
+
+
+
+    
+    
+    
+   
+    
+    <!-- <input placeholder="Email" type="date" id="date"/> -->
+   
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="admin.js" ></script>
+</body>
+</html>
