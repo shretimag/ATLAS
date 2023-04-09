@@ -1,4 +1,6 @@
 # ATLAS
+
+https://shretimag.github.io/ATLAS/
 Problem Statement:
 College teaches us more than academic learning. People engage and showcase their talents learn, new skills, sharpen their own, learn as well as teach others too. We are fortunate to have a campus like IIT(ISM), Dhanbad which gives every student opportunities in every field.
 For students who are constantly keeping up with academics as well as co-curricular activities it is difficult to manage everything at once. Time management becomes a major factor.
