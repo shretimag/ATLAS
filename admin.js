@@ -42,6 +42,19 @@ add_event_button.addEventListener('click',()=>
     alert("event added!")
     
 })    
+
+const auth = firebase.auth()
+
+firebase.auth().onAuthStateChanged((user)=>{
+    if(!user){
+        location.replace("index.html")
+    }
+  })
+  
+  
+  function logout(){
+    firebase.auth().signOut()
+  }
     
 // function uploadImage() {
 //     const ref = firebase.storage().ref();
