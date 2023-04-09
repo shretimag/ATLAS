@@ -25,17 +25,25 @@
 			</div>
 		</div>
 	</nav>
-    <img id="round" src="images/wtc.png">
-    <p id="one">Add New Events</p>
-    <a href="eventinput(1).html"><button type="button" class="btn btn-info">Add Event</button></a>
-    <p id="one">Your Events</p>
+		<div>
+		<img id="round" src="images/wtc.png">
+		  <h1>We The Crew</h1>
+		  <h5>ADD UP NEW EVENTS:</h5>
+		  <a href="eventinput.html"><button type="button" class="btn btn-info">Add Event</button></a>
+		</div>  
+		<h5>Your Events</h5>
     <div class="events">
         <ul id="list"></ul>
     </div>
-    <p id="one">Events Calendar</p>
+	<h5>Events Calendar</h5>
 	<div class="hero">
 		<div id="calendar"></div>
 </div>
+	  
+    
+    
+    
+<link rel="stylesheet" href="https://boxicons.com/boxicons.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 
 <!-- Add the evo-calendar.js for.. obviously, functionality! -->
@@ -76,7 +84,6 @@ const database = firebase.database();
 let x=[]
 let y=[]
 
-const clubslitm=database.ref('clubs/litm@iitism')
 const clubswtc=database.ref('clubs/wtc@iitism')
 
 
@@ -86,21 +93,29 @@ clubswtc.on("value",function(snapshot){const data=snapshot.val()
 	{	
 			let value=Object.values(data)[i]
 			
-			 x.push(value["name"])
+			 x.push(value)
 			 
 		
 	}
  console.log(x)
  var list = document.getElementById('list');
-
 for (let i = 0; i < x.length; i++) {
 	var listItem = document.createElement('li');
-	listItem.appendChild(document.createTextNode(x[i]));
-
+	listItem.appendChild(document.createTextNode(x[i]["name"]));
 	list.appendChild(listItem);
+    var remove=document.createElement("button");
+    // edit.appendChild(document.createTextNode("edit"))
+	remove.className="remove-btn";
+    remove.textContent="remove";
+    remove.classList.add(x[i]["clubid"]+"/"+x[i]["name"]);
+    remove.addEventListener("click",()=>{database.ref("clubs/"+x[i]["clubid"]+"/"+x[i]["name"]).remove(); alert("removed")})
+    list.appendChild(remove);
+    
+
       }
 })
 
+ 
 clubswtc.on("value",function(snapshot){const data=snapshot.val()
 	 
 	 for(let i=0 ; i < Object.keys(data).length;i++)
@@ -109,6 +124,7 @@ clubswtc.on("value",function(snapshot){const data=snapshot.val()
 			 
 			  y.push({id:value["name"] 
 			   ,name:value["name"]
+               ,description:("time:-"+value["time"]+";venue:-"+value["venue"]+";by "+value["clubid"].split("@")[0])
 				,date:value["date"]
 			 ,type:"holiday"
 			 ,everyYear: true})

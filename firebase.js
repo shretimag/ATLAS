@@ -13,24 +13,3 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth()
 const database = firebase.database()
 
-database.ref('clubs').on("value",function(snapshot){const data=snapshot.val()
-  let formlink=[]
-  let img=[]
-  // console.log(Object.values(data))
-  
-  
-  for (let i=0;i<Object.keys(data).length;i++){
-    for (let j=0;j<Object.keys(Object.values(data)[i]).length;j++)
-    {
-      let k=Object.values((Object.values(data)[i]))[j]
-      
-      formlink.push(k["formlink"])
-      img.push(k["imglink"])
-      
-  
-    }
-  }
-  console.log(formlink)
-  console.log(img)  
-  
-  })
